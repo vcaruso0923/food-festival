@@ -1,6 +1,5 @@
 const path = require('path');
 const webpack = require("webpack");
-const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 const WebpackPwaManifest = require("webpack-pwa-manifest");
 
 module.exports = {
@@ -22,6 +21,7 @@ module.exports = {
                     {
                         loader: 'file-loader',
                         options: {
+                            esModule:false,
                             name(file) {
                                 return '[path][name].[ext]';
                             },
@@ -41,9 +41,6 @@ module.exports = {
         new webpack.ProvidePlugin({
             $: "jquery",
             jQuery: "jquery"
-        }),
-        new BundleAnalyzerPlugin({
-            analyzerMode: "static", // the report outputs to an HTML file in the dist folder
         }),
         new WebpackPwaManifest({
             name: "Food Event",
