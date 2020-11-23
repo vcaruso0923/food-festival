@@ -12,6 +12,8 @@ A PWA for attendees of a food festival so that they can see important informatio
 * [Tests](#tests)
 * [Questions](#questions)
 
+![foosfestival](https://user-images.githubusercontent.com/62676730/100019963-d8763500-2d93-11eb-97e9-faaf1b3b013b.PNG)
+
 ## Installation
 
 Clone the repository. Install all node dependencies. Open the index.html in the browser.
